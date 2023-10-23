@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      .card{
+        transition: all 0.3s;
+      }
+      .card :hover{
+        transition: scale(1.15);
+      }
+    </style>
+</head>
+<body data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary text-bg-dark">
+        <div class="container-fluid">
+            <a href="#">
+                <img src="https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather02-1024.png" width="30" height="30" alt="Error">
+            </a>
+            <a class="navbar-brand" href="#">Weather</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/BlackThunder39">GitHub</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/in/arpit-j-8024b5230/">Linkedin</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Other Projects</a>
+              </li>
+            </ul>
+            <form class="d-flex" id="Search">
+              <input id="SearchBar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-info" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <p></p>
+    <main>
+    <div class="row row-cols-1 row-cols-md-3 mb-3">
+      <div class="col mx-auto">
+        <div class="card mb-4 rounded-3 shadow-sm border-info">
+          <div class="card-header py-3 text-center">
+            <h4 id="InputName" class="my-0 fw-normal ">Mumbai</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><span id="InputTemp">30</span> <small class="text-body-secondary fw-light">°C</small></h1>
+            <ul class="list-unstyled mt-3 mb-4 ">
+              <li>Condition:   <span id="InputCondition" class="fw-bold">___</span> </li>
+              <li>Feels Like:  <span id="InputFeelsLike" class="fw-bold">___</span>°C </li>
+              <li>Humidity:    <span id="InputHumidy">____</span>% </li>
+              <li>Rain:        <span id="InputRainAmt">____</span> inches </li>
+              <li>Air Quality: <span id="InputAirQuality">____</span></li>
+            </ul>
+            <!-- <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="display-6 text-center mb-4">Popular Cities</h2>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 20%;"></th>
+            <th style="width: 20%;">Temperature(°C)</th>
+            <th style="width: 20%;">Feels Like(°C)</th>
+            <th style="width: 20%;">Condition</th>
+            <th style="width: 20%;">Air Quality</th>
+            <th style="width: 20%;">Rain(in)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Mumbai</th>
+            <td id="MumTemp">LMAO</td>
+            <td id="MumFeel">LMAO</td>
+            <td id="MumCondition">LMAO</td>
+            <td id="MumAirQuality">LMAO</td>
+            <td id="MumRain">LMAO</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">New Delhi</th>
+            <td id="DelTemp">LMAO</td>
+            <td id="DelFeel">LMAO</td>
+            <td id="DelCondition">LMAO</td>
+            <td id="DelAirQuality">LMAO</td>
+            <td id="DelRain">LMAO</td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Bangalore</th>
+            <td id="BlrTemp">LMAO</td>
+            <td id="BlrFeel">LMAO</td>
+            <td id="BlrCondition">LMAO</td>
+            <td id="BlrAirQuality">LMAO</td>
+            <td id="BlrRain">LMAO</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Udupi</th>
+            <td id="UduTemp">LMAO</td>
+            <td id="UduFeel">LMAO</td>
+            <td id="UduCondition">LMAO</td>
+            <td id="UduAirQuality">LMAO</td>
+            <td id="UduRain">LMAO</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Reykjavik</th>
+            <td id="ReyTemp">LMAO</td>
+            <td id="ReyFeel">LMAO</td>
+            <td id="ReyCondition">LMAO</td>
+            <td id="ReyAirQuality">LMAO</td>
+            <td id="ReyRain">LMAO</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
