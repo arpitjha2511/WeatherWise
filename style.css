@@ -15,7 +15,7 @@ body.dark-mode {
 }
 
 .card.dark-mode:hover {
-    transform: scale(1.008); /* Enlarge the card on hover */
+    transform: scale(1.005); /* Enlarge the card on hover */
 }
 
 .card.dark-mode::before {
