@@ -11,6 +11,11 @@ body.dark-mode {
     color: #ddd;
     border-radius: 15px; /* Rounded corners for the card */
     z-index: 1;
+    transition: transform 0.3s ease; /* Added transition for transform */
+}
+
+.card.dark-mode:hover {
+    transform: scale(1.008); /* Enlarge the card on hover */
 }
 
 .card.dark-mode::before {
@@ -26,7 +31,7 @@ body.dark-mode {
         0 0 10px rgba(58, 207, 227, 0.75),
         0 0 20px rgba(58, 207, 227, 0.75);
     border-radius: 17px; /* Matching rounded corners for the glow */
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; /* Transition for the glow */
 }
 
 .card.dark-mode:hover::before {
