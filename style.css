@@ -1,0 +1,49 @@
+/* Dark Mode */
+body.dark-mode {
+    background-color: #181818;
+    color: #ddd;
+}
+
+/* Card with Neon Glow Effect */
+.card.dark-mode {
+    position: relative;
+    background-color: #222;
+    color: #ddd;
+    border-radius: 15px; /* Rounded corners for the card */
+    z-index: 1;
+}
+
+.card.dark-mode::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    left: -8px;
+    z-index: -1;
+    border: 2px solid rgba(58, 207, 227, 0.75);
+    box-shadow: 
+        0 0 10px rgba(58, 207, 227, 0.75),
+        0 0 20px rgba(58, 207, 227, 0.75);
+    border-radius: 17px; /* Matching rounded corners for the glow */
+    transition: all 0.3s ease-in-out;
+}
+
+.card.dark-mode:hover::before {
+    box-shadow: 
+        0 0 20px rgba(58, 207, 227, 0.8),
+        0 0 40px rgba(58, 207, 227, 0.8);
+    animation: flicker 2.5s infinite alternate;
+}
+
+/* Pronounced Flicker Animation */
+@keyframes flicker {
+    0%   { opacity: 0.95; }
+    20%  { opacity: 0.90; }
+    40%  { opacity: 1; }
+    60%  { opacity: 0.92; }
+    75%  { opacity: 0.95; }
+    80%  { opacity: 0.9; }
+    90%  { opacity: 0.8; }
+    100% { opacity: 0.87; }
+}
