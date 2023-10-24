@@ -57,7 +57,7 @@ const updateMain= function(x,city){
   let quality = 'undefined';
   if(index=='1'){
     quality='Excellent';
-    inpQuality.classList.add('text-success-emphasis');
+    inpQuality.classList.add('text-success');
   }
   else if(index=='2'){
     quality='Good';
@@ -69,7 +69,7 @@ const updateMain= function(x,city){
   }
   else if(index=='4'){
     quality='Unhealthy';
-    inpQuality.classList.add('text-danger');
+    inpQuality.classList.add('text-danger-emphasis');
   }
   else if(index=='5'){
     quality='Very Unhealthy';
@@ -138,7 +138,7 @@ const updateTableMum= async function(){
   }
   else if(index=='2'){
     quality='Good';
-    MumAirQuality.classList.add('text-success');
+    MumAirQuality.classList.add('text-success-emphasis');
   }
   else if(index=='3'){
     quality='Moderate';
@@ -146,7 +146,7 @@ const updateTableMum= async function(){
   }
   else if(index=='4'){
     quality='Unhealthy';
-    MumAirQuality.classList.add('text-danger');
+    MumAirQuality.classList.add('text-danger-emphasis');
   }
   else if(index=='5'){
     quality='Very Unhealthy';
@@ -178,7 +178,7 @@ const updateTableBlr= async function(){
   }
   else if(index=='2'){
     quality='Good';
-    BlrAirQuality.classList.add('text-success');
+    BlrAirQuality.classList.add('text-success-emphasis');
   }
   else if(index=='3'){
     quality='Moderate';
@@ -186,7 +186,7 @@ const updateTableBlr= async function(){
   }
   else if(index=='4'){
     quality='Unhealthy';
-    BlrAirQuality.classList.add('text-danger');
+    BlrAirQuality.classList.add('text-danger-emphasis');
   }
   else if(index=='5'){
     quality='Very Unhealthy';
@@ -218,7 +218,7 @@ const updateTableDel= async function(){
   }
   else if(index=='2'){
     quality='Good';
-    DelAirQuality.classList.add('text-success');
+    DelAirQuality.classList.add('text-success-emphasis');
   }
   else if(index=='3'){
     quality='Moderate';
@@ -226,7 +226,7 @@ const updateTableDel= async function(){
   }
   else if(index=='4'){
     quality='Unhealthy';
-    DelAirQuality.classList.add('text-danger');
+    DelAirQuality.classList.add('text-danger-emphasis');
   }
   else if(index=='5'){
     quality='Very Unhealthy';
@@ -258,7 +258,7 @@ const updateTableUdu= async function(){
   }
   else if(index=='2'){
     quality='Good';
-    UduAirQuality.classList.add('text-success');
+    UduAirQuality.classList.add('text-success-emphasis');
   }
   else if(index=='3'){
     quality='Moderate';
@@ -266,7 +266,7 @@ const updateTableUdu= async function(){
   }
   else if(index=='4'){
     quality='Unhealthy';
-    UduAirQuality.classList.add('text-danger');
+    UduAirQuality.classList.add('text-danger-emphasis');
   }
   else if(index=='5'){
     quality='Very Unhealthy';
@@ -299,7 +299,7 @@ const updateTableRey= async function(){
   }
   else if(index=='2'){
     quality='Good';
-    ReyAirQuality.classList.add('text-success');
+    ReyAirQuality.classList.add('text-success-emphasis');
   }
   else if(index=='3'){
     quality='Moderate';
@@ -307,7 +307,7 @@ const updateTableRey= async function(){
   }
   else if(index=='4'){
     quality='Unhealthy';
-    ReyAirQuality.classList.add('text-danger');
+    ReyAirQuality.classList.add('text-danger-emphasis');
   }
   else if(index=='5'){
     quality='Very Unhealthy';
