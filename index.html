@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeatherWise</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherWise</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-  </head>
+  <link rel="stylesheet" href="style.css">
+</head>
+
 <body data-bs-theme="dark">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary text-bg-dark">
-        <div class="container-fluid">
-            <a href="#">
-                <img src="https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather02-1024.png" width="30" height="30" alt="Error">
-            </a>
-            <a class="navbar-brand" href="https://blackthunder39.github.io/WeatherWise/">WeatherWise</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" target="_blank" href="https://github.com/BlackThunder39">GitHub</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/arpit-j-8024b5230/">Linkedin</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" target="_blank" aria-disabled="true">Other Projects</a>
-              </li>
-            </ul>
-            <form class="d-flex" id="Search">
-              <input id="SearchBar" class="form-control me-2" type="search" placeholder="Enter City" aria-label="Search">
-              <button class="btn btn-outline-info" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-      <p><br></p>
-      <p></p>
-    <main>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary text-bg-dark">
+    <div class="container-fluid">
+      <a href="#">
+        <img src="https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather02-1024.png" width="30" height="30"
+          alt="Error">
+      </a>
+      <a class="navbar-brand" href="https://blackthunder39.github.io/WeatherWise/">WeatherWise</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://github.com/BlackThunder39">GitHub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/arpit-j-8024b5230/">Linkedin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" target="_blank" aria-disabled="true">Other Projects</a>
+          </li>
+        </ul>
+        <form class="d-flex" id="Search">
+          <input id="SearchBar" class="form-control me-2" type="search" placeholder="Enter City" aria-label="Search">
+          <button class="btn btn-outline-info" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <p><br></p>
+  <p></p>
+  <main>
     <div class="row row-cols-1 row-cols-md-3 mb-3">
       <div class="col mx-auto card dark-mode">
         <div class="mb-4 rounded-3 shadow-sm border-info">
@@ -50,15 +54,53 @@
             <h4 id="InputName" class="my-0 fw-normal ">Mumbai</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title"><span id="InputTemp">30</span> <small class="text-body-secondary fw-light">°C</small></h1>
+
+            <div id="CurrentInfoCard" class="" >
+              <h1 class="card-title pricing-card-title"><span id="InputTemp">30</span> <small
+                class="text-body-secondary fw-light">°C</small></h1>
             <ul class="list-unstyled mt-3 mb-4 ">
-              <li>Condition:   <span id="InputCondition" class="fw-bold">___</span> </li>
-              <li>Feels Like:  <span id="InputFeelsLike" class="fw-bold">___</span>°C </li>
-              <li>Humidity:    <span id="InputHumidy">____</span>% </li>
-              <li>Rain:        <span id="InputRainAmt">____</span> inches </li>
+              <li>Feels Like: <span id="InputFeelsLike" class="fw-bold">___</span>°C </li>
+              <li>Condition: <span id="InputCondition" class="fw-bold">___</span> </li>
+              <li>Humidity: <span id="InputHumidity">____</span>% </li>
+              <li>Rain: <span id="InputRainAmt">____</span> inches </li>
+              <li>Wind Speed: <span id="WindSpeed">____</span> km/h </span></li>
+              <li>UV Index: <span id="InputUV">____</span></li>
               <li>Air Quality: <span id="InputAirQuality">____</span></li>
-            </ul>
-            <!-- <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button> -->
+             </ul>
+            </div>
+            
+           <div id="ForecastCard" class="d-none">
+            <h1 class="card-title pricing-card-title text-center "><img id="ConditionImg" src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="" class="mx-auto w-25"> <br> <span id="ForecastCondition">Sunny</span></h1>
+          <ul class="list-unstyled mt-3 mb-4 ">
+            <li>Max Temp: <span id="ForecastMax" class="fw-bold">___</span>°C </li>
+            <li>Min Temp: <span id="ForecastMin" class="fw-bold">___</span>°C </li>
+            <li>Avg Temp: <span id="ForecastAvg" class="fw-bold">___</span>°C </li>
+            <li>Humidity: <span id="ForecastHumid">____</span>% </li>
+            <li>Chance of Rain: <span id="ForecastRainChance">____</span>% </li>
+            <li>UV Index: <span id="ForecastUV">____</span></li>
+            <li>Sunrise: <span id="Sunrise">____</span></li>
+            <li>Sunset : <span id="Sunset">____</span></li>
+          </ul>
+           </div>
+
+            <button type="button" class="w-100 btn btn-lg btn-outline-info" id="ToggleForecast">Forecast</button>
+            <p></p>
+            <div class="btn-group d-flex justify-content-center d-none btn-group-toggle" role="group" id="BtnGrp">
+              <button type="button" id="BtnOne" class="w-100 btn btn-lg btn-outline-info">Today</button>
+              <button type="button" id="BtnTwo" class="w-100 btn btn-lg btn-outline-info">Tomorrow</button>
+              <button type="button" id="BtnThree" class="w-100 btn btn-lg btn-outline-info">Day After</button>
+            </div>
+            <p></p>
+            <button type="button" class="w-100 btn btn-lg btn-outline-info d-none" id="CurrentWeather">Current Weather</button>
+          </div>
+          <div class="card-footer text-muted">
+            <div id="CurrentFooter">
+              Local Time: <span id="LocalTime">_____________</span> <br>
+              Last Updated: <span id="LastUpdated">_____________</span>
+            </div>
+            <div id="ForecastFooter" class="d-none">
+              Forecast Date: <span id="ForecastDate">_____________</span>
+            </div>
           </div>
         </div>
       </div>
@@ -70,65 +112,76 @@
       <table class="table text-center">
         <thead>
           <tr>
-            <th style="width: 20%;"></th>
-            <th style="width: 20%;">Temperature(°C)</th>
-            <th style="width: 20%;">Feels Like(°C)</th>
-            <th style="width: 20%;">Condition</th>
-            <th style="width: 20%;">Air Quality</th>
-            <th style="width: 20%;">Rain(in)</th>
+            <th style="width: 15%;"></th>
+            <th style="width: 16.6%;">Temperature(°C)</th>
+            <th style="width: 16.6%;">Feels Like(°C)</th>
+            <th style="width: 16.6%;">Condition</th>
+            <th style="width: 16.6%;">Air Quality</th>
+            <th style="width: 16.6%;">UV Index</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row" class="text-start">Mumbai</th>
-            <td id="MumTemp">NA</td>
-            <td id="MumFeel">NA</td>
-            <td id="MumCondition">NA</td>
-            <td id="MumAirQuality">NA</td>
-            <td id="MumRain">NA</td>
-          </tr>
-          <tr>
-            <th scope="row" class="text-start">New Delhi</th>
+            <th scope="row" class="text-start">&nbsp;New Delhi</th>
             <td id="DelTemp">NA</td>
             <td id="DelFeel">NA</td>
             <td id="DelCondition">NA</td>
             <td id="DelAirQuality">NA</td>
-            <td id="DelRain">NA</td>
+            <td id="DelUV">NA</td>
           </tr>
-        </tbody>
-
-        <tbody>
           <tr>
-            <th scope="row" class="text-start">Bangalore</th>
+            <th scope="row" class="text-start">&nbsp;Bangalore</th>
             <td id="BlrTemp">NA</td>
             <td id="BlrFeel">NA</td>
             <td id="BlrCondition">NA</td>
             <td id="BlrAirQuality">NA</td>
-            <td id="BlrRain">NA</td>
+            <td id="BlrUV">NA</td>
           </tr>
           <tr>
-            <th scope="row" class="text-start">Udupi</th>
+            <th scope="row" class="text-start">&nbsp;Manipal</th>
             <td id="UduTemp">NA</td>
             <td id="UduFeel">NA</td>
             <td id="UduCondition">NA</td>
             <td id="UduAirQuality">NA</td>
-            <td id="UduRain">NA</td>
+            <td id="UduUV">NA</td>
           </tr>
           <tr>
-            <th scope="row" class="text-start">Reykjavik</th>
+            <th scope="row" class="text-start">&nbsp;Tokyo</th>
+            <td id="TokTemp">NA</td>
+            <td id="TokFeel">NA</td>
+            <td id="TokCondition">NA</td>
+            <td id="TokAirQuality">NA</td>
+            <td id="TokUV">NA</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">&nbsp;San Francisco</th>
+            <td id="SFTemp">NA</td>
+            <td id="SFFeel">NA</td>
+            <td id="SFCondition">NA</td>
+            <td id="SFAirQuality">NA</td>
+            <td id="SFUV">NA</td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">&nbsp;Reykjavik</th>
             <td id="ReyTemp">NA</td>
             <td id="ReyFeel">NA</td>
             <td id="ReyCondition">NA</td>
             <td id="ReyAirQuality">NA</td>
-            <td id="ReyRain">NA</td>
+            <td id="ReyUV">NA</td>
           </tr>
         </tbody>
       </table>
     </div>
   </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <script src="app.js"></script>
+  <br>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="app.js"></script>
+
 </body>
+
 </html>
