@@ -19,17 +19,34 @@
 // 	console.error(error);
 // }
 let city = 'Mumbai';
-const getWeather = async (city) => {
+const getWeather = async (inputCity) => {
   const params = {
     headers: {
       'X-RapidAPI-Key': '9f5f9702ebmsh5a0d20a3ae298e8p12cad7jsn7ec89f8a4ff6',
       'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
     }
   };
-  const response = await axios.get(`https://weatherapi-com.p.rapidapi.com/current.json?q=${city}&aqi=yes`, params)
-  console.log(response.data.current);
-  return response.data.current;
+  try{
+    const response = await axios.get(`https://weatherapi-com.p.rapidapi.com/current.json?q=${inputCity}&aqi=yes`, params)
+    console.log(response.data.current);
+    return response.data.current;
+  }
+  catch(e){
+    city='Amsterdam';
+    const response = await axios.get(`https://weatherapi-com.p.rapidapi.com/current.json?q=${city}&aqi=yes`, params)
+    console.log(response.data.current);
+
+    //Toast implementing Error Notif: 
+    toastBootstrap.show()
+    
+    
+    return response.data.current;
+    
+  }
 }
+//Selecting Toast 
+const ToastError = document.querySelector('#ToastError');
+const toastBootstrap = bootstrap.Toast.getOrCreateInstance(ToastError); //Copy paste
 const getLocalTime = async (city) => {
   const params = {
     headers: {
@@ -42,7 +59,6 @@ const getLocalTime = async (city) => {
   console.log(response.data.location.localtime);
   return response.data.location.localtime;
 }
-
 //PART 1: Updating the main searchable card
 const inpName= document.querySelector('#InputName');
 const inpTemp = document.querySelector('#InputTemp');
@@ -65,6 +81,7 @@ SearchSelector.addEventListener('submit', async function(event) {
   event.preventDefault();
   city= SearchBarSelector.value;
   let data = await getWeather(city);
+  console.log(data);
 
   //Updating Current Card:
   updateMain(data,city);
@@ -81,7 +98,6 @@ SearchSelector.addEventListener('submit', async function(event) {
   ButtonSelectorTwo.classList.remove('active'); 
   ButtonSelectorThree.classList.remove('active');
 });
-
 
 const AirQuality= function(index,Selector){
   let quality='NA';
