@@ -33,7 +33,7 @@ const getWeather = async (inputCity) => {
   }
 catch(e){
     let temp=inputCity;
-    city='Amsterdam';
+    city='Tokyo';
     const response = await axios.get(`https://weatherapi-com.p.rapidapi.com/current.json?q=${city}&aqi=yes`, params)
     console.log(response.data.current);
 
