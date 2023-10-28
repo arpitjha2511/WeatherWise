@@ -31,15 +31,15 @@ const getWeather = async (inputCity) => {
     console.log(response.data.current);
     return response.data.current;
   }
-  catch(e){
+catch(e){
+    let temp=city
     city='Amsterdam';
     const response = await axios.get(`https://weatherapi-com.p.rapidapi.com/current.json?q=${city}&aqi=yes`, params)
     console.log(response.data.current);
 
     //Toast implementing Error Notif: 
-    toastBootstrap.show()
-    
-    
+    ErrorText.innerText=`${temp} Not Found`;
+    toastBootstrap.show();
     return response.data.current;
     
   }
@@ -47,6 +47,7 @@ const getWeather = async (inputCity) => {
 //Selecting Toast 
 const ToastError = document.querySelector('#ToastError');
 const toastBootstrap = bootstrap.Toast.getOrCreateInstance(ToastError); //Copy paste
+
 const getLocalTime = async (city) => {
   const params = {
     headers: {
