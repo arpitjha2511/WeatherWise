@@ -73,6 +73,7 @@ body.dark-mode {
 } */
 
 
+
 #ToastError {
     background-color: rgba(255, 10, 10, 0.2)!important;
     border: 1px solid rgba(255, 20, 20, 0.5);
@@ -90,8 +91,18 @@ body.dark-mode {
 #ToastError .toast-body {
     color: #fff;
     display: flex;
+    justify-content: space-between;
+}
 
-} 
+#ToastError .btn-close {
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 0.5rem;
+}
+
+#ToastError .btn-close {
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 0.5rem;
+}
 
 .toast {
     display: flex;
@@ -102,4 +113,3 @@ body.dark-mode {
     flex-grow: 1; 
     margin-right: 1rem; 
 }
-
