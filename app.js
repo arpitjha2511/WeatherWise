@@ -1,5 +1,5 @@
 // DOCS: https://www.weatherapi.com/docs/
-//const API_KEY='9f5f9702ebmsh5a0d20a3ae298e8p12cad7jsn7ec89f8a4ff6';
+// const API_KEY='9f5f9702ebmsh5a0d20a3ae298e8p12cad7jsn7ec89f8a4ff6';
 // const axios = require('axios');
 
 // const options = {
@@ -16,8 +16,13 @@
 // 	const response = await axios.request(options);
 // 	console.log(response.data);
 // } catch (error) {
-// 	console.error(error);
-// }
+  // 	console.error(error);
+  // }
+
+  //Selecting Toast 
+  const ErrorMessage = document.querySelector('#ErrorMessage');
+  const ToastError = document.querySelector('#ToastError');
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(ToastError); //Copy paste
 let city = 'Mumbai';
 const getWeather = async (inputCity) => {
   const params = {
@@ -31,23 +36,19 @@ const getWeather = async (inputCity) => {
     console.log(response.data.current);
     return response.data.current;
   }
-catch(e){
-    let temp=inputCity;
-    city='Tokyo';
+  catch(e){
+    let temp=city;
+    city='Amsterdam';
     const response = await axios.get(`https://weatherapi-com.p.rapidapi.com/current.json?q=${city}&aqi=yes`, params)
     console.log(response.data.current);
 
     //Toast implementing Error Notif: 
-    ErrorText.innerText=`${temp} Not Found`;
+    ErrorMessage.innerText=`${temp} Not Found`;
     toastBootstrap.show();
     return response.data.current;
     
   }
 }
-//Selecting Toast 
-const ToastError = document.querySelector('#ToastError');
-const toastBootstrap = bootstrap.Toast.getOrCreateInstance(ToastError); //Copy paste
-
 const getLocalTime = async (city) => {
   const params = {
     headers: {
@@ -261,7 +262,7 @@ updateTableDel();
 
 //UPDATE Manipal
 const updateTableUdu= async function(){
-  let data= await getWeather('Udupi');
+  let data= await getWeather('Manipal');
   UduTemp.innerText=`${data.temp_c}`;
   UduFeel.innerText=`${data.feelslike_c}`;
   UduCondition.innerText=`${data.condition.text}`;
